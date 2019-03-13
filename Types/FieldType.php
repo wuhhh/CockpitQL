@@ -141,7 +141,7 @@ class FieldType {
                         ];
 
                         foreach ($collection['fields'] as &$field) {
-                            $fields[$field['name']] = JsonType::instance();
+                            $fields[$field['name']] = self::getType($field);
                         }
 
                         return $fields;
